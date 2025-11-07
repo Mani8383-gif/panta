@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+body{
+    color: #e0e7ff;
+    direction: rtl;
+    font-family: wolf;
+    color: #1C1C1C;
+    background-color: #F9FAFB;
+}
+@font-face {
+    font-family: wolf;
+    src: url(./assets/Vazir-Thin.woff2);
+}
