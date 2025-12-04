@@ -1,1 +1,17 @@
-<p class="salam">photo works!</p>
+<p-galleria
+  [value]="images"
+  [numVisible]="5"
+  [circular]="true"
+  [showItemNavigators]="true"
+  [showThumbnails]="false"
+  [containerStyle]="{ 'width': '100%', 'height': '82vh' }"
+  [autoPlay]="true"
+  [transitionInterval]="3000"
+>
+  <ng-template #item let-item>
+    <img
+      [src]="item.itemImageSrc"
+      style="width: 100%; height: 82vh; object-fit: cover; display: block;"
+    />
+  </ng-template>
+</p-galleria>

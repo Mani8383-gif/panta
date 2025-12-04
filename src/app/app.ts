@@ -2,14 +2,15 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from "./navbar/navbar";
 import { Footer } from "./footer/footer";
-import { Photo } from "./photo/photo";
+import {  PhotoComponent } from "./photo/photo";
+import { Companies } from "./companies/companies";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Navbar, Footer, Photo],
+  imports: [RouterOutlet, Navbar, Footer, Companies, PhotoComponent],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
 export class App {
-  protected readonly title = signal('pana-copmany');
+  protected readonly title = signal('panta-copmany');
 }
