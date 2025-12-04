@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GalleriaModule } from 'primeng/galleria';
+import { GalleriaModule, GalleriaResponsiveOptions } from 'primeng/galleria';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 
@@ -14,6 +14,7 @@ export class PhotoComponent {
   images: any[] = [];
  
   isAutoPlay: boolean = false;
+responsiveOptions: GalleriaResponsiveOptions[]|undefined;
 
 
   constructor() {

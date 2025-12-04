@@ -9,7 +9,11 @@
 @media (max-width: 600px) {
   .my-galleria,
   .my-galleria .p-galleria-item img {
-    height: 50vh !important;
+    height: 20vh ;
     overflow-x: hidden;
+
   }
+}
+body{
+    overflow:hidden ;
 }

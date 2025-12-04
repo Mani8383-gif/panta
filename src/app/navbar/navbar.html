@@ -1,7 +1,14 @@
-<nav class="hidden md:block">
-  <button class="md:hidden text-3xl">☰</button>
-    <ul class="flex  gap-5 bg-gray-200 text-black shadow-lg h-25 items-center ">
-      <li><img src="../assets/panta.png" alt="panta logo" class="w-55 h-40 mt-3" ></li>
+<nav >
+  <div class="bg-red-600 h-5"></div>
+  <div class="flex justify-center md:justify-start"><img src="assets/panta.png" alt="" class="h-15 w-30 mt-3 mb-3"></div>
+  <div class="bg-gray-200 text-black flex justify-start relative">
+ <button class="md:hidden text-1xl m-1  ">☰</button>
+ 
+</div>
+ <!-- <img src="assets/panta.png" alt="panta logo" class="" > -->
+  <div class="hidden md:block xl: ">
+     <ul class="flex  gap-5 bg-gray-200 text-black shadow-lg h-18 items-center ">
+      <li></li>
         <li >
         <a (click)="onclickhome()" class="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#E53935] after:transition-all hover:after:w-full hover:text-[#E53935] duration-300 cursor-pointer ">خانه</a>
         </li>
@@ -24,6 +31,8 @@
          <a (click)="onclickcontactus()" class="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#E53935] after:transition-all hover:after:w-full hover:text-[#E53935] duration-300 cursor-pointer">تماس با ما</a>
         </li>
     </ul>
+  </div>
+   
 </nav>
 <!-- <section class="p-10 bg-gray-50 ">
   <h2 class="text-2xl font-bold border-r-4 border-yellow-500 pr-3 mb-6">خدمات ما</h2>
