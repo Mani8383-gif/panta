@@ -14,8 +14,8 @@
         <li><a href="https://epedc.ir/"><img class="h-40 w-60 " src="/assets/bargh-logo-2.png" alt="epedc"></a></li>
        </ul>
 
-
-       <p-galleria class="md:hidden "
+<div class="bg-gray-200 h-70">
+       <p-galleria class="md:hidden  "
   [value]="images"
   [numVisible]="5"
   [circular]="true"
@@ -30,8 +30,10 @@
   <ng-template #item let-item>
     <img 
       [src]="item.itemImageSrc"
-      style="width: 35%; height: 35vh; object-fit: cover; display: block; "
+      style="width: 45%; height: 35vh; object-fit: cover; display: block; "
     />
   </ng-template>
 </p-galleria>
+</div>
+  
 </section>
