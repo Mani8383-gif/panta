@@ -3,6 +3,7 @@ import { PhotoComponent } from "../../photo/photo";
 import { Companies } from "../../companies/companies";
 import { Khadamat } from "../../khadamat/khadamat";
 
+
 @Component({
   selector: 'app-home',
   imports: [PhotoComponent, Companies, Khadamat],

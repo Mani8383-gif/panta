@@ -6,11 +6,34 @@
       
     </div>
 
-  <ul class="flex  justify-center  align-middle"> 
-    <li><a href="https://hgs-co.ir/"><img class="h-40 w-60 " src="/assets/hadid ghate logo.png" alt="hadid gahte"></a></li>
-     <li> <a href="https://nirouchlor.com/"><img class="h-40 w-60  "  src="/assets/niro kolor png.png" alt="nirouchlor"></a></li>
-      <li ><a href="https://google.com"><img class="h-40 w-60 " src="/assets/bargh logo.png" alt=""></a></li>
-       <li><a href="https://www.spgc.ir/"><img class="h-40 w-60 " src="/assets/pars jonobi logo.png" alt="spgc"></a></li>
-        <li><a href="https://epedc.ir/"><img class="h-40 w-60 " src="/assets/bargh logo 2.png" alt="epedc"></a></li>
+  <ul class="hidden md:flex md:justify-center md:align-middle"> 
+    <li><a href="https://hgs-co.ir/"><img class="h-40 w-60 " src="/assets/hadid-ghate-logo.png" alt="hadid gahte"></a></li>
+     <li> <a href="https://nirouchlor.com/"><img class="h-40 w-60  "  src="/assets/niro-kolor-png.png" alt="nirouchlor"></a></li>
+      <li ><a href="https://google.com"><img class="h-40 w-60 " src="/assets/bargh-logo.png" alt=""></a></li>
+       <li><a href="https://www.spgc.ir/"><img class="h-40 w-60 " src="/assets/pars-jonobi-logo.png" alt="spgc"></a></li>
+        <li><a href="https://epedc.ir/"><img class="h-40 w-60 " src="/assets/bargh-logo-2.png" alt="epedc"></a></li>
        </ul>
+
+
+       <p-galleria class="md:hidden "
+  [value]="images"
+  [numVisible]="5"
+  [circular]="true"
+  [showItemNavigators]="true"
+  [showThumbnails]="false"
+  
+  [responsiveOptions]="responsiveOptions"
+  [containerStyle]="{ 'width': '100%', 'height': '72vh' ,'border':'none'}"
+  [autoPlay]="true"
+  [transitionInterval]="3000"
+>
+  <ng-template #item let-item>
+    <img
+      [src]="item.itemImageSrc"
+      style="width: 100%; height: 72vh; object-fit: cover; display: block;
+
+  "
+    />
+  </ng-template>
+</p-galleria>
 </section>
