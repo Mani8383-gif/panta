@@ -16,4 +16,11 @@
 }
 body{
     overflow:hidden ;
+   
+}
+:host ::ng-deep .p-galleria,
+:host ::ng-deep .p-galleria-item-wrapper,
+:host ::ng-deep .p-galleria-item-container,
+:host ::ng-deep .p-galleria-content {
+  border-radius: 0 !important;
 }

@@ -12,7 +12,8 @@ import { Router } from '@angular/router';
   styleUrl: './navbar.css',
 })
 export class Navbar {
- 
+ height=0
+ transition:any
   isopen=false
   router=inject(Router)
   ispone!: boolean;
@@ -35,9 +36,12 @@ onclickorganizationalchart(){
 }
 togglemenu(){
 this.isopen=!this.isopen
+this.height=250
+  
 }
 closeMenu(){
   this.isopen=false
+
 }
 
   @HostListener('document:click', ['$event'])
