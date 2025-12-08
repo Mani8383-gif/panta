@@ -2,12 +2,13 @@
   <div class="bg-gray-900 h-5"></div>
   <div class="flex justify-center md:justify-start"><img src="assets/panta.png" alt="" class="h-15 w-30 mt-3 mb-3"></div>
   <div class="bg-gray-900 text-gray-100 flex justify-start relative">
- <button class="md:hidden text-1xl m-1  ">☰</button>
+ <button class="md:hidden text-1xl m-1 menu-button " (click)="togglemenu()">☰</button>
  
 </div>
  <!-- <img src="assets/panta.png" alt="panta logo" class="" > -->
-  <div class="hidden md:block xl: ">
-     <ul class="flex  gap-5 bg-gray-900 text-gray-100 shadow-lg h-18 items-center ">
+  <div class=" md:block  ">
+   
+<ul  class="hidden gap-5  md:flex md:flex-row md:h-18 bg-gray-900 text-gray-100 shadow-lg h-screen md:items-center ">
       <li></li>
         <li >
         <a (click)="onclickhome()" class="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#E53935] after:transition-all hover:after:w-full hover:text-[#E53935] duration-300 cursor-pointer ">خانه</a>
@@ -31,28 +32,16 @@
          <a (click)="onclickcontactus()" class="relative after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#E53935] after:transition-all hover:after:w-full hover:text-[#E53935] duration-300 cursor-pointer">تماس با ما</a>
         </li>
     </ul>
+    @if (isopen) {  <ul class="flex flex-col  bg-gray-900 h-screen w-1/2 gap-4 md:hidden  mobile-menu" >
+      
+      <li class="bg-gray-900 text-gray-100 border-b-1 border-gray-100 pr-4 pb-2 "><a (click)="onclickhome()" (click)="closeMenu()">خانه</a></li>
+      <li class="bg-gray-900 text-gray-100 border-b-1 border-gray-100  pr-4 pb-2 "><a (click)="onclickorganizationalchart()" (click)="closeMenu()">چارت سازمانی</a></li>
+      <li class="bg-gray-900 text-gray-100 border-b-1 border-gray-100  pr-4 pb-2 "><a (click)="onclickcertificate()" (click)="closeMenu()">گواهینامه ها</a></li>
+      <li class="bg-gray-900 text-gray-100 border-b-1 border-gray-100  pr-4 pb-2 "><a (click)="onclickaboutus()" (click)="closeMenu()">تماس باما</a> </li>
+      <li class="bg-gray-900 text-gray-100 border-b-1 border-gray-100 pr-4 pb-2 "><a (click)="onclickcontactus()" (click)="closeMenu()">درباره ما</a></li>
+     </ul>
+    }
+   
   </div>
    
 </nav>
-<!-- <section class="p-10 bg-gray-50 ">
-  <h2 class="text-2xl font-bold border-r-4 border-yellow-500 pr-3 mb-6">خدمات ما</h2>
-  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold text-yellow-600 mb-2">مشاوره و نظارت</h3>
-      <p class="text-gray-700 text-sm">ارائه خدمات مهندسی، طراحی نقشه‌ها، و نظارت بر اجرای پروژه‌های برق.</p>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold text-yellow-600 mb-2">اجرا و راه‌اندازی</h3>
-      <p class="text-gray-700 text-sm">نصب، تست و راه‌اندازی کامل پروژه‌های برقی با رعایت استانداردهای ایمنی.</p>
-    </div>
-
-    <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-semibold text-yellow-600 mb-2">نیروگاه‌ها</h3>
-      <ul class="list-disc text-sm text-gray-700 ml-4">
-        <li>نیروگاه خورشیدی (طراحی و اجرا)</li>
-        <li>نیروگاه مقیاس کوچک (CHP)</li>
-      </ul>
-    </div>
-  </div>
-</section> -->

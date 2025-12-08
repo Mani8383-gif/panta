@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, inject } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
 import { Button } from "primeng/button";
 import { SkeletonDesignTokens } from '@primeuix/themes/types/skeleton';
@@ -12,7 +12,11 @@ import { Router } from '@angular/router';
   styleUrl: './navbar.css',
 })
 export class Navbar {
+ 
+  isopen=false
   router=inject(Router)
+  ispone!: boolean;
+
  onclickhome(){
 this.router.navigate(['/home'])
  }
@@ -29,6 +33,18 @@ onclickcertificate(){
 onclickorganizationalchart(){
   this.router.navigate(['/organizational-chart'])
 }
+togglemenu(){
+this.isopen=!this.isopen
+}
+closeMenu(){
+  this.isopen=false
+}
 
-
+  @HostListener('document:click', ['$event'])
+  clickOutside(event: Event) {
+    const clickedInside = (event.target as HTMLElement).closest('.mobile-menu, .menu-button');
+    if (!clickedInside) {
+      this.isopen = false;
+    }
+  }
 }
