@@ -5,11 +5,13 @@ import { Button } from "primeng/button";
 import { SkeletonDesignTokens } from '@primeuix/themes/types/skeleton';
 import { AnimateOnScrollModule } from 'primeng/animateonscroll';
 import { Router } from '@angular/router';
+import { navbarAnimation } from '../animations/animations';
 @Component({
   selector: 'app-navbar',
   imports: [CommonModule, Button,AnimateOnScrollModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
+  animations:[navbarAnimation]
 })
 export class Navbar {
  height=0

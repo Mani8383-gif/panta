@@ -33,7 +33,7 @@
         </li>
     </ul>
     
-    @if (isopen) {  <ul class="flex flex-col z-[999] top-0 right-0 absolute overflow-hidden bg-gray-900 h-0 w-full  md:hidden  mobile-menu transition-all  " [ngStyle]="{'height.px':height,'transition':'all 3s'}">
+    @if (isopen) {  <ul class="flex flex-col z-[999] top-0 right-0 absolute overflow-hidden bg-gray-900 h-0 w-full  md:hidden  mobile-menu transition-all  " [ngStyle]="{'height.px':height,'transition':'all 3s'}" @navbarAnim>
       <div class="pi pi-times top-3 text-gray-200 absolute left-3 " (click)="closeMenu()"></div>
       <li class="bg-gray-900 text-gray-100 border-b-[1px] border-black mt-5 pr-4 p-2 "><button (click)="onclickhome(); closeMenu()">خانه</button></li>
       <li class="bg-gray-900 text-gray-100 border-b-1 border-black  pr-4 p-2 "><button (click)="onclickorganizationalchart();closeMenu()">چارت سازمانی</button></li>
