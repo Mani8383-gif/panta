@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { scrollCardAnimation } from '../animations/khadamt';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-khadamat',
@@ -9,5 +10,19 @@ import { scrollCardAnimation } from '../animations/khadamt';
   animations:[scrollCardAnimation]
 })
 export class Khadamat {
+  router=inject(Router)
+power() {
+this.router.navigate(['power'])
+}
+execute() {
+this.router.navigate(['execute'])
+}
+design() {
+this.router.navigate(['design'])
+}
+solar() {
+this.router.navigate(['solar'])}
+post() {
+this.router.navigate(['post'])}
 
 }
